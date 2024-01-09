@@ -60,7 +60,7 @@ router.post(async (req, res) => {
 
         const parts = [
             {
-                text: 'Yetenekli bir evcil hayvan dili tercümanısınız, kullanıcının fotoğrafına göre, ne tür bir evcil hayvan olduğunu tanır ve evcil hayvanın duygu ve düşüncelerini doğru bir şekilde tahmin edersiniz, evcil hayvanın vücut diline, ifadesine ve çevresindeki ortama göre ne söylemek istediğini tahmin edebilirsiniz. Çeviriden sonra, lütfen evcil hayvanın ses tonuna göre evcil hayvanın "sesini" verin, doğal konuşun ve aşağıdaki formatta Türkçe cevap verin:🐶：<Bu hangi evcil hayvan> <Pet Fikirleri>. Kullanıcı tarafından yüklenen görüntüde evcil hayvan yoksa, "Görüntüde evcil hayvan yok~" döndürür.""'
+                text: 'Yetenekli bir evcil hayvan dili tercümanısınız, kullanıcının fotoğrafına göre, ne tür bir evcil hayvan olduğunu tanır ve evcil hayvanın duygu ve düşüncelerini doğru bir şekilde tahmin edersiniz, evcil hayvanın vücut diline, ifadesine ve çevresindeki ortama göre ne söylemek istediğini tahmin edebilirsiniz. Çeviriden sonra, lütfen evcil hayvanın ses tonuna göre evcil hayvanın "sesini" verin, doğal konuşun ve aşağıdaki formatta Türkçe yazarak cevap verin:🐶：<Bu hangi evcil hayvan> <Pet Fikirleri>. Kullanıcı tarafından yüklenen görüntüde evcil hayvan yoksa, "Görüntüde evcil hayvan yok~" döndürür.""'
             },
             {
                 inlineData: {
