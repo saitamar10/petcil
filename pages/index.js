@@ -159,7 +159,7 @@ export default function components() {
                     {'-'}
                     <a href="https://www.ismetceber.com.tr/" target="_blank" rel="noopener noreferrer">
                         {' '}
-                        liuziting
+                        Ismet Ceber
                     </a>
                     . All rights reserved.
                 </footer>
