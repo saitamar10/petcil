@@ -148,7 +148,7 @@ export default function components() {
                                 onChange={previewImage}
                             />
                             <Button type="submit" variant="dark" disabled={loading || compressing}>
-                                {compressing ? 'Görüntüleri tanıma' : loading ? 'Görüntüleri tanıma' : 'Bakalım ne düşünüyorsun.'}
+                                {compressing ? 'Görüntüleri tanımlanıyor' : loading ? 'Görüntüleri tanımlanıyor' : 'Bakalım ne düşünüyorsun.'}
                             </Button>
                         </div>
                     </form>
