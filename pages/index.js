@@ -79,7 +79,7 @@ export default function components() {
         })
         if (!response.ok) {
             const errorData = await response.json()
-            setResult({ data: '我好像没有识别出来，换一张图片或者重新上传！', error: errorData.error })
+            setResult({ data: 'Bunu tanıyamıyorum, resmi değiştirin veya yeniden yükleyin！', error: errorData.error })
             setLoading(false)
             return
         }
@@ -91,19 +91,19 @@ export default function components() {
     return (
         <div className="container">
             <Head>
-                <title>我知道你的宠物在想什么！</title>
+                <title>Evcil hayvanınızın ne düşündüğünü biliyorum.！</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
             <main className="flex flex-col items-center justify-center min-h-screen py-2">
                 <Card className="max-w-md ">
                     <CardHeader>
                         <div className="flex items-center">
-                            <h2 className="text-2xl font-bold">我知道你的宠物在想什么！</h2>
+                            <h2 className="text-2xl font-bold">Evcil hayvanınızın ne düşündüğünü biliyorum！</h2>
                         </div>
                     </CardHeader>
                     <CardContent>
                         {compressing ? (
-                            <div style={{ textAlign: 'center' }}>Scaning image...</div>
+                            <div style={{ textAlign: 'center' }}>Resim taranıyor...</div>
                         ) : (
                             imagePreview && (
                                 <img
@@ -120,11 +120,11 @@ export default function components() {
                                 {compressing
                                     ? '🐱🐱🐱🐱🐱🐱'
                                     : loading
-                                    ? '让我想想你的宠物在想些什么呢...'
+                                    ? 'Evcil hayvanınızın ne düşündüğünü düşünmeme izin verin.'
                                     : result.error
-                                    ? `好像我没看懂它在想什么，请重试或换一张图片！`
+                                    ? `Ne düşündüğünü okuyamıyorum gibi görünüyor, lütfen tekrar deneyin veya farklı bir resim elde edin!`
                                     : result.data ||
-                                      '🐱: 哎呀，草地上有好多枯叶，我得快点跑到草丛里，这样铲屎官就看不到我了！'}
+                                      '🐱: Oops, çimlerin üzerinde çok fazla ölü yaprak var, kürekçinin beni görmemesi için hızla çimlere doğru koşmam gerekiyor!'}
                             </p>
                         </div>
                     </CardContent>
@@ -138,7 +138,7 @@ export default function components() {
                         encType="multipart/form-data"
                     >
                         <div className="grid w-full gap-4 mt-4">
-                            <Label htmlFor="catImage">上传你宠物的照片，AI告诉你它在想些什么~</Label>
+                            <Label htmlFor="catImage">Evcil hayvanınızın bir fotoğrafını yükleyin ve yapay zeka size onun ne düşündüğünü söylesin~</Label>
                             <Input
                                 required
                                 id="catImage"
@@ -148,25 +148,24 @@ export default function components() {
                                 onChange={previewImage}
                             />
                             <Button type="submit" variant="dark" disabled={loading || compressing}>
-                                {compressing ? '识别图像中' : loading ? '识别图像中' : '让我看看你在想什么呢'}
+                                {compressing ? 'Görüntüleri tanıma' : loading ? 'Görüntüleri tanıma' : 'Bakalım ne düşünüyorsun.'}
                             </Button>
                         </div>
                     </form>
                 </div>
-                <p className="tip mt-4">本服务不会收集、存储或使用任何与图片相关的个人信息</p>
+                <p className="tip mt-4">Hizmet, görüntülerle ilgili olarak herhangi bir kişisel bilgi toplamaz, saklamaz veya kullanmaz</p>
                 <footer className="flex justify-center items-center">
                     &copy; 2024
                     {'-'}
-                    <a href="https://jingle.bio/liuziting/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.ismetceber.com.tr/" target="_blank" rel="noopener noreferrer">
                         {' '}
                         liuziting
                     </a>
                     . All rights reserved.
                 </footer>
                 <p>
-                    <a href="https://gemini.smartai.wtf/">GeminiChat</a> |
-                    <a href="https://tools.smartai.wtf/"> SmartAI</a> |
-                    <a href="https://babythoughts.netlify.app/"> BabyThoughts</a>
+                    <a href="https://www.saitama.net.tr/">Blog</a> |
+                    <a href="https://www.ismetceber.com.tr/"> CV</a> |
                 </p>
             </main>
         </div>
